@@ -1,0 +1,55 @@
+nav {
+  padding: 0em 2em;
+  position: sticky;
+  z-index: 1;
+  top: 5em;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav > button {
+  margin-left: 1em;
+  background: none;
+  border: none;
+}
+
+@media (max-width: 570px) {
+  nav {
+    top: 1em;
+  }
+}
+
+/* Shopping cart button */
+
+.card-link {
+  padding: 1em;
+  position: relative;
+
+  color: black;
+  text-decoration: none;
+  border: 10px solid rgba(0, 0, 0, .05);
+  border-radius: 3px;
+
+  transition: 150ms all;
+}
+.card-link:hover {
+  border-color: red;
+}
+.card-link:hover:after {
+  background-position: center right 1em;
+}
+.card-link:after {
+  transition: 150ms all;
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-image: url(images/shopping-cart.svg);
+  background-repeat: no-repeat;
+  background-position: center right 2em;
+}
